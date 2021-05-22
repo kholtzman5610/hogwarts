@@ -1,7 +1,13 @@
-<h1 class = "text-center"> Welcome! </h1>
-<p class = "text-center"> Have you ever wanted to become a student at Hogwarts School of Witchcraft and Wizardry? </p>
-
+<br>
 <div class="text-center">
-  <%= button_to 'Current Students', student_index_path, :method => :get,  :class => "btn btn-outline-warning" %> <br>
-  <%= button_to 'Meet Our Staff', professor_index_path, :method => :get,  :class => "btn btn-outline-warning" %>
+  <h1> Welcome! </h1>
+  
+  <p> 
+    Have you ever wanted to become a student at Hogwarts School of Witchcraft and Wizardry?
+  </p>
+
+  <p> School Motto:'Draco dormiens nunquam titillandus' – which means 'Never tickle a sleeping dragon'. </p>
+<br>
+  <a class="btn btn-primary" href="/student" role="button">Current Students</a>
+  <a class="btn btn-primary" href="/professor" role="button">Meet Our Staff</a>
 </div>

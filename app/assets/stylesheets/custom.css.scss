@@ -1,23 +1,19 @@
 @import 'bootstrap/dist/css/bootstrap';
 
-// .navbar {
+body {
+    background: url('background.jpg') no-repeat;
+    background-size: cover;
+    height: 650px;
+}
 
-//     background-color: #FDF6EA !important;
-    
-//     }
-    
-     
-    
-//     .navbar-brand {
-    
-//     font-size: 3rem;
-    
-//     }
-    
-     
-    
-//     h1 {
-    
-//     color: red;
-    
-//     }
+
+
+tr {
+    color: whitesmoke
+}
+
+table td 
+{
+  table-layout: auto;
+  width: 20%; 
+}

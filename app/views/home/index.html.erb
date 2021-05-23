@@ -1,13 +1,21 @@
-<br>
+<br><br>
+<div id="container"></div>
 <div class="text-center">
-  <h1> Welcome! </h1>
-  
-  <p> 
-    Have you ever wanted to become a student at Hogwarts School of Witchcraft and Wizardry?
-  </p>
+  <h3> Have you ever wanted to become a student at Hogwarts School of Witchcraft and Wizardry? </h3>
+  <h3> School Motto: 'Draco dormiens nunquam titillandus' – which means 'Never tickle a sleeping dragon'. </h3>
 
-  <p> School Motto:'Draco dormiens nunquam titillandus' – which means 'Never tickle a sleeping dragon'. </p>
-<br>
   <a class="btn btn-primary" href="/student" role="button">Current Students</a>
   <a class="btn btn-primary" href="/professor" role="button">Meet Our Staff</a>
 </div>
+
+<script src="https://rawcdn.githack.com/akzhy/Vara/16e30acca2872212e28735cfdbaba696a355c780/src/vara.min.js"></script>
+<script>
+  var vara = new Vara("#container", "https://rawcdn.githack.com/akzhy/Vara/ed6ab92fdf196596266ae76867c415fa659eb348/fonts/Satisfy/SatisfySL.json", [{
+    text: "Welcome!!",
+    fontSize: 60,
+    y:10
+  }], {
+    strokeWidth: 2,
+    textAlign:"center"
+  });
+</script>

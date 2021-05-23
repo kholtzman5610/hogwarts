@@ -6,12 +6,11 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
+    <%= render 'layouts/navigation' %>
   </head>
 
-  <body>
-    <header>
-      <%= render 'layouts/navigation' %>
-    </header>
+  <body> 
     <%= yield %>
   </body>
 </html>

@@ -1,11 +1,37 @@
-<h1>Current Houses</h1>
+<div class="card-group">
+  <div class="card text-white bg-danger text-center" >
+    <div class="card-body">
+        <h2 class="card-title">Gryffindor</h2>
+        <p class="card-text">Values bravery, daring, nerve, and chivalry. 
+        Its emblematic animal is the lion, and its colours are scarlet and gold.</p>
+    </div>
+    <img src="gryffindor.png" class="card-img-bottom" style="height:500px;" alt="Gryffindor Crest">
+  </div>
 
-<table>
-  <tbody>
-      <% @houses.each do |house| %>
-      <tr>
-        <td><%= house.name %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <div class="card text-white bg-success text-center" >
+    <div class="card-body">
+        <h2 class="card-title">Slytherin</h2>
+        <p class="card-text">Values ambition, leadership, self-preservation, cunning and resourcefulness.
+        Its emblematic animal is the serpent, and its colours are emerald green and silver.</p>
+    </div>
+    <img src="slytherin.png" class="card-img-bottom" style="height:500px;" alt="Slytherin Crest">
+  </div>
+
+  <div class="card text-white bg-primary text-center" >
+    <div class="card-body">
+        <h2 class="card-title">Ravenclaw</h2>
+        <p class="card-text">Values intelligence, knowledge, curiosity, creativity and wit.
+        Its emblematic animal is the eagle, and its colours are blue and bronze.</p>
+    </div>
+    <img src="ravenclaw.png" class="card-img-bottom" style="height:500px;" alt="Ravenclaw Crest">
+  </div>  
+  
+  <div class="card text-white bg-warning text-center" >
+    <div class="card-body">
+        <h2 class="card-title">Hufflepuff</h2>
+        <p class="card-text">Values hard work, dedication, patience, loyalty, and fair play. 
+        Its emblematic animal is the badger, and yellow and black are its colours.</p>
+    </div>
+    <img src="hufflepuff.png" class="card-img-bottom" style="height:500px;" alt="Hufflepuff Crest">
+  </div>
+</div>

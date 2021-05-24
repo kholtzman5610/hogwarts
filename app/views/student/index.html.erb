@@ -1,22 +1,89 @@
-<h1>Current Students</h1>
+<br>
+<div class="container">
+<h1 class="text-center">Current Students</h1>
+  <div class="card-columns text-center text-white">
 
-<table>
-  <thead>
-    <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>House</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-  
-  <tbody>
-      <% @students.each do |student| %>
-      <tr>
-        <td><%= student.first_name %></td>
-        <td><%= student.last_name %></td>
-        <td><%= student.house.name %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <div class="card bg-danger">
+      <div class="card-body">
+        <h5 class="card-title"><%= @students[0].full_name %></h5>
+        <p class="card-text">House: <%= @students[0].house.name %></p>
+      </div>
+    </div>
+
+
+    <div class="card bg-danger">
+      <div class="card-body">
+        <h5 class="card-title"><%= @students[1].full_name %></h5>
+        <p class="card-text">House: <%= @students[1].house.name %></p>
+      </div>
+    </div>    
+
+    <div class="card bg-danger">
+      <div class="card-body">
+        <h5 class="card-title"><%= @students[2].full_name %></h5>
+        <p class="card-text">House: <%= @students[2].house.name %></p>
+      </div>
+    </div>
+
+    <div class="card bg-success">
+      <div class="card-body">
+        <h5 class="card-title"><%= @students[3].full_name %></h5>
+        <p class="card-text">House: <%= @students[3].house.name %></p>
+      </div>
+    </div>
+
+    <div class="card bg-success">
+      <div class="card-body">
+        <h5 class="card-title"><%= @students[4].full_name %></h5>
+        <p class="card-text">House: <%= @students[4].house.name %></p>
+      </div>
+    </div>
+
+    <div class="card bg-success">
+      <div class="card-body">
+        <h5 class="card-title"><%= @students[5].full_name %></h5>
+        <p class="card-text">House: <%= @students[5].house.name %></p>
+      </div>
+    </div>    
+
+    <div class="card bg-primary">
+      <div class="card-body">
+        <h5 class="card-title"><%= @students[6].full_name %></h5>
+        <p class="card-text">House: <%= @students[6].house.name %></p>
+      </div>
+    </div>
+
+    <div class="card bg-primary">
+      <div class="card-body">
+        <h5 class="card-title"><%= @students[7].full_name %></h5>
+        <p class="card-text">House: <%= @students[7].house.name %></p>
+      </div>
+    </div>
+
+
+    <div class="card bg-warning">
+      <div class="card-body">
+        <h5 class="card-title"><%= @students[8].full_name %></h5>
+        <p class="card-text">House: <%= @students[8].house.name %></p>
+      </div>
+    </div>
+
+    <div class="card bg-warning">
+      <div class="card-body">
+        <h5 class="card-title"><%= @students[9].full_name %></h5>
+        <p class="card-text">House: <%= @students[9].house.name %></p>
+      </div>
+    </div>
+  </div>  
+</div>
+
+<style>
+h1 {
+  color: white;
+}
+
+
+.card-columns {
+  column-count: 3;
+}
+</style>

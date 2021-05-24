@@ -1,22 +1,42 @@
-<h1>Current Professors</h1>
+<br>
+<div class="container">
+  <div class="card-columns text-center text-white">
 
-<table>
-  <thead>
-    <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>House</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-  
-  <tbody>
-      <% @professors.each do |professor| %>
-      <tr>
-        <td><%= professor.first_name %></td>
-        <td><%= professor.last_name %></td>
-        <td><%= professor.house.name %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <div class="card bg-success">
+      <div class="card-body">
+        <h5 class="card-title"><%= "Professor " + @professors[0].full_name %></h5>
+        <p class="card-text">House: <%= @professors[0].house.name %></p>
+      </div>
+    </div>
+
+
+    <div class="card bg-warning">
+      <div class="card-body">
+        <h5 class="card-title"><%= "Professor " + @professors[1].full_name %></h5>
+        <p class="card-text">House: <%= @professors[1].house.name %></p>
+      </div>
+    </div>    
+
+    <div class="card bg-primary">
+      <div class="card-body">
+        <h5 class="card-title"><%= "Professor " +  @professors[2].full_name %></h5>
+        <p class="card-text">House: <%= @professors[2].house.name %></p>
+      </div>
+    </div>
+
+    <div class="card bg-danger">
+      <div class="card-body">
+        <h5 class="card-title"><%= "Professor " + @professors[3].full_name %></h5>
+        <p class="card-text">House: <%= @professors[3].house.name %></p>
+      </div>
+    </div>
+
+  </div>  
+</div>
+
+
+<style>
+.card-columns {
+  column-count: 3;
+}
+</style>

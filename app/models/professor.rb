@@ -1,5 +1,5 @@
 class Professor < ApplicationRecord
-    #has_many :courses
+    belongs_to :courses
     belongs_to :house
 
     def full_name

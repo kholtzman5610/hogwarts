@@ -1,0 +1,94 @@
+<br>
+<div class="container text-center">
+    <table>
+        <thead>
+            <tr>
+                <th>Year 1/2</th>
+                <th>Year 3/4/5</th>
+                <th>Year 6/7</th>
+                <th>Extra-curricular Subjects</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><%= @courses[0].name %></td>
+                <td><%= @courses[8].name %></td>
+                <td><%= @courses[13].name %></td>
+                <td><%= @courses[16].name %>(Year 6/7)</td>
+            </tr>
+            <tr>
+                <td><%= @courses[1].name %></td>
+                <td><%= @courses[9].name %></td>
+                <td><%= @courses[14].name %></td>
+                <td><%= @courses[17].name %></td>
+            </tr>
+            <tr>
+                <td><%= @courses[2].name %></td>
+                <td><%= @courses[10].name %></td>
+                <td><%= @courses[15].name %></td>
+                <td><%= @courses[18].name %></td>
+            </tr>
+            <tr>
+                <td><%= @courses[3].name %></td>
+                <td><%= @courses[11].name %></td>
+                <td></td>
+                <td><%= @courses[19].name %></td>
+            </tr>
+            <tr>
+                <td><%= @courses[4].name %></td>
+                <td><%= @courses[12].name %></td>
+                <td></td>
+                <td><%= @courses[20].name %> (Year 6/7)</td>
+            </tr>
+            <tr>
+                <td><%= @courses[5].name %></td>
+                <td></td>
+                <td></td>
+                <td><%= @courses[21].name %> (Year 3 and up)</td>
+            </tr>
+            <tr>
+                <td><%= @courses[6].name %></td>
+                <td></td>
+                <td></td>
+                <td><%= @courses[22].name %> (Year 3 and up)</td>
+            </tr>
+            <tr>
+                <td><%= @courses[7].name %></td>
+                <td></td>
+                <td></td>
+                <td><%= @courses[24].name %> (Year 3)</td>
+            </tr>                              
+        </tbody>
+    </table>
+</div>
+
+
+
+<style>
+table, th, td {
+  border: 3px solid black;
+  padding: 10px;
+  width: 1090px;
+}
+
+th {
+    color: white;
+    font-weight: bold;
+    filter: grayscale(1) contrast(9) drop-shadow(.05em .05em black);
+}
+
+td {
+    font-weight: bold;
+	font: cursive;
+	text-align: center;
+	filter: drop-shadow(.05em .05em black);
+}
+
+tr {
+    background-color: rgba(0,0,0,0.6)
+}
+body {
+    color:  #EFD777;
+    font-size: 15px;
+}
+</style>

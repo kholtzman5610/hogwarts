@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_16_215338) do
+ActiveRecord::Schema.define(version: 2021_05_26_001834) do
+
+  create_table "cohorts", force: :cascade do |t|
+    t.string "name"
+    t.integer "professor_id"
+    t.integer "course_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "courses", force: :cascade do |t|
     t.string "name"

@@ -1,42 +1,65 @@
 <br>
-<div class="container">
-  <div class="card-columns text-center text-white">
-
-    <div class="card bg-success">
-      <div class="card-body">
-        <h5 class="card-title"><%= "Professor " + @professors[0].full_name %></h5>
-        <p class="card-text">House: <%= @professors[0].house.name %></p>
-      </div>
-    </div>
-
-
-    <div class="card bg-warning">
-      <div class="card-body">
-        <h5 class="card-title"><%= "Professor " + @professors[1].full_name %></h5>
-        <p class="card-text">House: <%= @professors[1].house.name %></p>
-      </div>
-    </div>    
-
-    <div class="card bg-primary">
-      <div class="card-body">
-        <h5 class="card-title"><%= "Professor " +  @professors[2].full_name %></h5>
-        <p class="card-text">House: <%= @professors[2].house.name %></p>
-      </div>
-    </div>
-
-    <div class="card bg-danger">
-      <div class="card-body">
-        <h5 class="card-title"><%= "Professor " + @professors[3].full_name %></h5>
-        <p class="card-text">House: <%= @professors[3].house.name %></p>
-      </div>
-    </div>
-
-  </div>  
+<div class="container text-center">
+    <table>
+        <thead>
+            <tr>
+                <th>Professor Name</th>
+                <th>House </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><%= @professors[0].full_name %></td>
+                <td><%= @professors[0].house.name %></td>
+            </tr>
+            <tr>
+                <td><%= @professors[1].full_name %></td>
+                <td><%= @professors[1].house.name %></td>               
+            </tr>
+            <tr>
+                <td><%= @professors[2].full_name %></td>
+                <td><%= @professors[2].house.name %></td>               
+            </tr>
+            <tr>
+                <td><%= @professors[3].full_name %></td>
+                <td><%= @professors[3].house.name %></td>               
+            </tr>  
+            <tr>
+                <td><%= @professors[4].full_name %></td>
+                <td><%= @professors[4].house.name %></td>               
+            </tr>                                                                            
+        </tbody>
+    </table>
 </div>
 
 
+
 <style>
-.card-columns {
-  column-count: 3;
+table, th, td {
+  border: 3px solid black;
+  padding: 10px;
+  width: 1090px;
+}
+
+th {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    filter: grayscale(1) contrast(9) drop-shadow(.05em .05em black);
+}
+
+td {
+    font-weight: bold;
+	font: cursive;
+	text-align: center;
+	filter: drop-shadow(.05em .05em black);
+}
+
+tr {
+    background-color: rgba(0,0,0,0.6)
+}
+body {
+    color:  #EFD777;
+    font-size: 15px;
 }
 </style>

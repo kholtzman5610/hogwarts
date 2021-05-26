@@ -1,0 +1,57 @@
+<br>
+<div class="container text-center">
+    <table>
+        <thead>
+            <tr>
+                <th>Class</th>
+                <th>Professor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><%= @cohorts[0].name %></td>
+                <td><%= "Professor " + @cohorts[0].professor.last_name %></td>
+            </tr>
+            <tr>
+                <td><%= @cohorts[1].name %></td>
+                <td><%= "Professor " + @cohorts[1].professor.last_name %></td>               
+            </tr>   
+            <tr>
+                <td><%= @cohorts[2].name %></td>
+                <td><%= "Professor " + @cohorts[2].professor.last_name %></td>               
+            </tr>                                
+        </tbody>
+    </table>
+</div>
+
+
+
+<style>
+table, th, td {
+  border: 3px solid black;
+  padding: 10px;
+  width: 1090px;
+}
+
+th {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    filter: grayscale(1) contrast(9) drop-shadow(.05em .05em black);
+}
+
+td {
+    font-weight: bold;
+	font: cursive;
+	text-align: center;
+	filter: drop-shadow(.05em .05em black);
+}
+
+tr {
+    background-color: rgba(0,0,0,0.6)
+}
+body {
+    color:  #EFD777;
+    font-size: 15px;
+}
+</style>

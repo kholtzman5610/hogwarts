@@ -1,4 +1,4 @@
-class CohortController < ApplicationController
+class CohortsController < ApplicationController
     before_action :set_cohort, only: [:show, :edit, :update, :destroy]
     def index
         @cohorts = Cohort.all
@@ -27,6 +27,6 @@ class CohortController < ApplicationController
     end
 
     def cohort_params
-        params.require(:cohort).permirt(:name, :professor_id, :course_id)
+        params.require(:cohort).permit(:name, :professor_id, :course_id)
     end
 end

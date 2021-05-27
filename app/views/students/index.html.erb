@@ -1,0 +1,64 @@
+<br>
+<div class="container text-center">
+    <table>
+        <thead>
+        <tr>
+            <th>Student first name</th>
+            <th>Student last name</th>
+            <th>House</th>
+            <th></th>
+        </tr>
+        </thead>
+
+        <tbody>
+            <% @students.each do |student| %>
+                <tr>
+                    <td><%= student.first_name %></td>
+                    <td><%= student.last_name %></td>
+                    <td><%= student.house.name %></td>
+                    <td><%= link_to 'Show', student %></td>
+                    <td><%= link_to 'Destroy', student_path(student), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+</div>
+
+<style>
+.container {
+    margin-right: 20px;
+    margin-left: 160px;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+}
+
+
+table, th, td {
+  border: 3px solid black;
+  padding: 10px;
+  width: 1010px;
+}
+
+th {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    filter: grayscale(1) contrast(9) drop-shadow(.05em .05em black);
+}
+
+td {
+    font-weight: bold;
+	font: cursive;
+	text-align: center;
+	filter: drop-shadow(.05em .05em black);
+}
+
+tr {
+    background-color: rgba(0,0,0,0.6)
+}
+body {
+    color:  #EFD777;
+    font-size: 15px;
+}
+</style>

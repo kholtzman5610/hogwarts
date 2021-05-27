@@ -1,4 +1,4 @@
-class CourseController < ApplicationController
+class CoursesController < ApplicationController
     before_action :set_course, only: [:show, :edit, :update, :destroy]
     def index
         @courses = Course.all
@@ -27,6 +27,6 @@ class CourseController < ApplicationController
     end
 
     def course_params
-        params.require(:course).permirt(:name)
+        params.require(:course).permit(:name)
     end
 end

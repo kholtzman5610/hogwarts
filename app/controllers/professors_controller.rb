@@ -1,4 +1,4 @@
-class ProfessorController < ApplicationController
+class ProfessorsController < ApplicationController
     before_action :set_professor, only: [:show, :edit, :update, :destroy] 
     def index
       @professors = Professor.all
@@ -27,6 +27,6 @@ class ProfessorController < ApplicationController
     end
   
     def professor_params
-      params.require(:professor).permirt(:first_name, :last_name, :house_id)
+      params.require(:professor).permit(:first_name, :last_name, :house_id)
     end
 end

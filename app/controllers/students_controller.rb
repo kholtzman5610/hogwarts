@@ -1,4 +1,4 @@
-class StudentController < ApplicationController
+class StudentsController < ApplicationController
     before_action :set_student, only: [:show, :edit, :update, :destroy] 
     def index
       @students = Student.all
@@ -20,13 +20,17 @@ class StudentController < ApplicationController
       end
     end
       
-      
+    def destroy
+      @student.destroy
+    end
+
+
     private
     def set_student
       @student = Student.find(params[:id])
     end
   
     def student_params
-      params.require(:student).permirt(:first_name, :last_name, :house_id)
+      params.require(:student).permit(:first_name, :last_name, :house_id)
     end
 end

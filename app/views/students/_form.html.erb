@@ -1,0 +1,21 @@
+<%= form_for(student) do |f| %>
+
+    <div class="field">
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name %>
+    </div>
+  
+    <div class="field">
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name %>
+    </div>
+  
+    <div>
+        <%= f.label :select_customer, "Select House" %> 
+        <%= f.collection_select :house_id, House.order(:name),:id,:name, include_blank: true %>
+    </div>
+    <br><br>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>

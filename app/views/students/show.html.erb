@@ -9,12 +9,10 @@
         </thead>
 
         <tbody>
-            <% @students.each do |student| %>
                 <tr>
-                    <td><%= student.full_name %></td>
-                    <td><%= student.house.name %></td>
+                    <td><%= @student.full_name %></td>
+                    <td><%= @student.house.name %></td>
                 </tr>
-            <% end %>
         </tbody>
     </table>
 </div>

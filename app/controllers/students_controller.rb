@@ -19,9 +19,18 @@ class StudentsController < ApplicationController
         render :new
       end
     end
+
+    def update
+      if @student.update(student_params)
+         redirect_to @student
+       else
+         render :edit
+       end
+     end
       
     def destroy
       @student.destroy
+      redirect_to students_path
     end
 
 

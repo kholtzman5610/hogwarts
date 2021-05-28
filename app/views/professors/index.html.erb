@@ -1,44 +1,36 @@
 <br>
-<div class="container text-center">
-    <table>
-        <thead>
+<table>
+    <thead>
+        <tr>
+            <th>Professor first name</th>
+            <th>Professor last name</th>
+            <th>House</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @professors.each do |professor| %>
             <tr>
-                <th>Professor Name</th>
-                <th>House </th>
+                <td><%= professor.first_name %></td>
+                <td><%= professor.last_name %></td>
+                <td><%= professor.house.name %></td>
             </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><%= @professors[0].full_name %></td>
-                <td><%= @professors[0].house.name %></td>
-            </tr>
-            <tr>
-                <td><%= @professors[1].full_name %></td>
-                <td><%= @professors[1].house.name %></td>               
-            </tr>
-            <tr>
-                <td><%= @professors[2].full_name %></td>
-                <td><%= @professors[2].house.name %></td>               
-            </tr>
-            <tr>
-                <td><%= @professors[3].full_name %></td>
-                <td><%= @professors[3].house.name %></td>               
-            </tr>  
-            <tr>
-                <td><%= @professors[4].full_name %></td>
-                <td><%= @professors[4].house.name %></td>               
-            </tr>                                                                            
-        </tbody>
-    </table>
-</div>
-
+        <% end %>
+    </tbody>
+</table>
 
 
 <style>
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
 table, th, td {
-  border: 3px solid black;
-  padding: 10px;
-  width: 1090px;
+    border: 3px solid black;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 th {

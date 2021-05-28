@@ -16,8 +16,7 @@
                     <td><%= student.first_name %></td>
                     <td><%= student.last_name %></td>
                     <td><%= student.house.name %></td>
-                    <td><%= link_to 'Show', student %></td>
-                    <td><%= link_to 'Destroy', student_path(student), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                    <td><%= button_to 'Destroy', student_path(student), method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-primary delete-btn" %></td>
                 </tr>
             <% end %>
         </tbody>

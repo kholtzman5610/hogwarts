@@ -1,12 +1,23 @@
+<br>
+<div class="container text-center">
 <h1>New Student<h1>
 
 <%= render 'form', student: @student %>
 
-
-<%= link_to 'Back Students', students_path %>
-
+<br>
+<a class="btn btn-primary" href="/students/" role="button">Back Students</a>
+</div>
 <style>
+.container {
+    margin-right: 20px;
+    margin-left: 105px;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+}
+
 .h1, h1 {
     font-size: 20px;
+    color: white;
 }
 </style>

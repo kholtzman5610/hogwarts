@@ -1,7 +1,7 @@
 class CohortsController < ApplicationController
     before_action :set_cohort, only: [:show, :edit, :update, :destroy]
     def index
-        @cohorts = Cohort.all
+        @cohorts = Cohort.order(:name)
     end
 
     def show

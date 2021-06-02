@@ -16,7 +16,7 @@
                     <td><%= student.first_name %></td>
                     <td><%= student.last_name %></td>
                     <td><%= student.house.name %></td>
-                    <td><%= button_to 'Destroy', student_path(student), method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-primary delete-btn" %></td>
+                    <td><%= button_to 'Avada Kedavra', student_path(student), method: :delete, :class => "btn btn-primary delete-btn" %></td>
                 </tr>
             <% end %>
         </tbody>
@@ -24,19 +24,12 @@
 </div>
 
 <style>
-.container {
-    margin-right: 20px;
-    margin-left: 160px;
-    padding-right: 15px;
-    padding-left: 15px;
-    width: 100%;
-}
-
-
 table, th, td {
-  border: 3px solid black;
-  padding: 10px;
-  width: 1010px;
+    border: 3px solid black;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%
 }
 
 th {

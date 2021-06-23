@@ -61,7 +61,6 @@ end
       put "/students/#{student.id}", params: { student: { first_name: "Jack" } }
       student.reload
       expect(student.first_name).to eq("Jack")
-      #expect(response).to redirect_to("/students/#{student.id}")
       expect(response).to redirect_to("/students")
     end
   end

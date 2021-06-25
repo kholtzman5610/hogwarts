@@ -1,6 +1,7 @@
 class StudentsController < ApplicationController
     rescue_from ActiveRecord::RecordNotFound, with: :catch_not_found
     before_action :set_student, only: [:show, :edit, :update, :destroy] 
+
     def index
       @students = Student.all
     end

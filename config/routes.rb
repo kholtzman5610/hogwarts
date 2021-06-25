@@ -3,8 +3,14 @@ Rails.application.routes.draw do
   get 'home/index'
   root 'home#index'
   
-  resources :cohorts
-  resources :courses
+
+  resources :courses do
+    resources :cohorts
+  end
+
+  resources :cohorts do
+    resources :grades
+  end
   resources :house
   resources :professors
   resources :students

@@ -3,10 +3,10 @@ class Student < ApplicationRecord
     validates :last_name, presence: true
     validates :house, presence: true
 
+    #belongs_to :course
     belongs_to :house
-    has_many :grades, dependent: :destroy
-    has_many :cohorts, through: :grades
-    
+    #belongs_to :cohort
+
     def full_name
         "#{first_name} #{last_name}"
     end

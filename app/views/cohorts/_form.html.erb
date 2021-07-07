@@ -1,0 +1,32 @@
+<%= form_for(cohort) do |f| %>
+  <% if cohort.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cohort.errors.count, "error") %> prohibited this cohort from being saved:</h2>
+
+      <ul style="list-style-type:none;">
+      <% cohort.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= f.label :course_name, "Course Name" %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :select_course, "Select Course" %> 
+    <%= f.collection_select :course_id, Course.order(:name), :id, :name, include_blank: true %>
+  </div>
+
+  <div>
+      <%= f.label :select_professor, "Select Professor" %> 
+      <%= f.collection_select :professor_id, Professor.all, :id, :full_name, include_blank: true %>
+  </div>
+  <br><br>
+  <div class="actions">
+  <%= f.submit "Save"%>
+  </div>
+<% end %>

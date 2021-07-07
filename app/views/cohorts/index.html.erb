@@ -1,22 +1,46 @@
 <br>
-<table>
-    <thead>
-        <tr>
-            <th>Class name</th>
-            <th>Professor name</th>
-        </tr>
-    </thead>
-    <tbody>
-        <% @cohorts.each do |cohort| %>
+<div class="container text-center">
+    <table>
+    <h1 id="notice"><%= notice %></h1>
+    <% if user_signed_in? %>
+        <thead>
             <tr>
-                <td><%= cohort.name %></td>
-                <td>Professor  <%= cohort.professor.last_name %></td>
+                <th>Class name</th>
+                <th>Professor name</th>
+                <th></th>
+                <th></th>
             </tr>
-        <% end %>
-    </tbody>
-</table>
-
-
+        </thead>
+    <% else %>
+        <thead>
+            <tr>
+                <th>Class name</th>
+                <th></th>
+            </tr>
+        </thead>
+    <% end %>
+    
+        <tbody>
+            <% @cohorts.each do |cohort| %>
+                <tr>
+                <% if user_signed_in? %>
+                    <td><%= cohort.name %></td>
+                    <td>Professor  <%= cohort.professor.last_name %></td>
+                    <td><%= link_to 'Edit', edit_cohort_path(cohort), :class => "btn btn-primary edit-btn" %></td>
+                    <td><%= button_to 'Cancel', cohort_path(cohort), method: :delete, :class => "btn btn-primary delete-btn" %></td>
+                <% else %>
+                    <td><%= cohort.name %></td>
+                    <td><%= link_to 'Revelio', cohort, :class => "btn btn-primary" %></td>
+                <% end %>
+                </tr> 
+            <% end %>
+        </tbody>
+    </table>
+    <br>
+    <% if user_signed_in? %>
+        <a class="btn btn-primary" href="/cohorts/new" role="button">New Class</a>
+    <% end %>
+</div>
 <style>
 
 h1 {

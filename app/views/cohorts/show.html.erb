@@ -3,21 +3,21 @@
     <table>
         <thead>
         <tr>
-            <th>Student's Full Name</th>
-            <th>House</th>
+            <th>Class Name</th>
+            <th>Professor Name</th>
         </tr>
         </thead>
 
         <tbody>
                 <tr>
-                    <td><%= @student.full_name %></td>
-                    <td><%= @student.house.name %></td>
+                    <td><%= @cohort.name %></td>
+                    <td>Professor  <%= @cohort.professor.last_name %></td>
                 </tr>
         </tbody>
     </table>
 </div>
 <br>
-<a class="btn btn-primary" href="/students" role="button">Go Back</a>
+<a class="btn btn-primary" href="/cohorts" role="button">Go Back</a>
 <style>
 .container {
     margin-right: 20px;

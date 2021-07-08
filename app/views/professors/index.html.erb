@@ -1,53 +1,27 @@
 <br>
-<table>
-    <thead>
-        <tr>
-            <th>Professor First name</th>
-            <th>Professor Last name</th>
-            <th>House</th>
-        </tr>
-    </thead>
-    <tbody>
+<div class="container text-center">
+    <div class="row row-cols-1 row-cols-md-3">
         <% @professors.each do |professor| %>
-            <tr>
-                <td><%= professor.first_name %></td>
-                <td><%= professor.last_name %></td>
-                <td><%= professor.house.name %></td>
-            </tr>
+            <div class="col-sm-3">
+                <div class="card" id="background">
+                    <div class="card-body">
+                        <h5 class="card-title"> <%= professor.first_name %></h5>
+                        <h5 class="card-title"> <%= professor.last_name %></h5>
+                        <h5 class="card-title"> <%= professor.house.name %></h5>
+                    </div>
+                </div>
+            </div>
         <% end %>
-    </tbody>
-</table>
+    </div>
+</div>
 
 
 <style>
-
-h1 {
-    color: white;
-    text-align: center;
+.card{
+    margin-bottom: 20px;
 }
 
-table, th, td {
-    border: 3px solid black;
-    padding: 10px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-th {
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    filter: grayscale(1) contrast(9) drop-shadow(.05em .05em black);
-}
-
-td {
-    font-weight: bold;
-	font: cursive;
-	text-align: center;
-	filter: drop-shadow(.05em .05em black);
-}
-
-tr {
+#background {
     background-color: rgba(0,0,0,0.6)
 }
 body {

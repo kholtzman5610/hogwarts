@@ -23,7 +23,7 @@
 
   <div>
       <%= f.label :select_professor, "Select Professor" %> 
-      <%= f.collection_select :professor_id, Professor.all, :id, :full_name, include_blank: true %>
+      <%= f.collection_select :professor_id, Professor.order(:first_name), :id, :full_name, include_blank: true %>
   </div>
   <br><br>
   <div class="actions">

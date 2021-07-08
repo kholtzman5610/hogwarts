@@ -3,74 +3,58 @@
     <table>
     <h1 id="notice"><%= notice %></h1>
     <% if user_signed_in? %>
-        <thead>
-            <tr>
-                <th>Class name</th>
-                <th>Professor name</th>
-                <th></th>
-                <th></th>
-            </tr>
-        </thead>
-    <% else %>
-        <thead>
-            <tr>
-                <th>Class name</th>
-                <th></th>
-            </tr>
-        </thead>
-    <% end %>
+    <div class="row row-cols-1 row-cols-md-3">
+        <% @cohorts.each do |cohort| %>
+            <div class="col-sm-3">
+                <div class="card" id="background">
+                    <div class="card-body">
+                        <h5 class="card-title"> <%= cohort.name %></h5>
+                        <p class="card-text"><%= cohort.professor.full_name %></p>
+                        
+                        <%= link_to 'Edit', edit_cohort_path(cohort), method: :get, :class => "btn btn-primary edit-btn" %> </button>
+                        <%= link_to 'Cancel', cohort_path(cohort), method: :delete, :class => "btn btn-primary delete-btn" %>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
     
-        <tbody>
-            <% @cohorts.each do |cohort| %>
-                <tr>
-                <% if user_signed_in? %>
-                    <td><%= cohort.name %></td>
-                    <td>Professor  <%= cohort.professor.last_name %></td>
-                    <td><%= link_to 'Edit', edit_cohort_path(cohort), :class => "btn btn-primary edit-btn" %></td>
-                    <td><%= button_to 'Cancel', cohort_path(cohort), method: :delete, :class => "btn btn-primary delete-btn" %></td>
-                <% else %>
-                    <td><%= cohort.name %></td>
-                    <td><%= link_to 'Revelio', cohort, :class => "btn btn-primary" %></td>
-                <% end %>
-                </tr> 
-            <% end %>
-        </tbody>
-    </table>
+    <% else %>
+    <div class="row row-cols-1 row-cols-md-3">
+        <% @cohorts.each do |cohort| %>
+            <div class="col-sm-3">
+                <div class="card" id="background">
+                    <div class="card-body">
+                        <h5 class="card-title"> <%= cohort.name %></h5>
+                        <%= link_to 'Revelio', cohort, :class => "btn btn-primary" %>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+    
+
+    <% end %>
+
+    
     <br>
     <% if user_signed_in? %>
         <a class="btn btn-primary" href="/cohorts/new" role="button">New Class</a>
     <% end %>
 </div>
+
 <style>
 
-h1 {
-    color: white;
-    text-align: center;
+.card{
+    margin-bottom: 20px;
 }
 
-table, th, td {
-    border: 3px solid black;
-    padding: 10px;
-    margin-left: auto;
-    margin-right: auto;
+#center {
     width: 50%;
+    margin: 0 auto;
 }
 
-th {
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    filter: grayscale(1) contrast(9) drop-shadow(.05em .05em black);
-}
-
-td {
-    font-weight: bold;
-	font: cursive;
-	text-align: center;
-	filter: drop-shadow(.05em .05em black);
-}
-
-tr {
+#background {
     background-color: rgba(0,0,0,0.6)
 }
 body {

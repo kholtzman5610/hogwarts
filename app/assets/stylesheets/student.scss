@@ -4,3 +4,13 @@
 .my_alert {
     text-align: center;
 }
+
+body, html {
+    text-align: center;
+
+    background: url('student_background.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

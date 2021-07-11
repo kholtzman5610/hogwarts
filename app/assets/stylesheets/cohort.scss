@@ -8,6 +8,36 @@ body, html {
     background-size: cover;
 }
 
+.navbar-nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: row;
+    padding-left: 0;
+    margin-bottom: 10px;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
 .card-title {
     color: #EFD777 !important;
+}
+
+.card{
+    font-family: cursive;
+    margin-bottom: 20px;
+}
+
+#center {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#background {
+    background-color: rgba(0,0,0,0.6)
+}
+
+body {
+    color:  white;
+    font-size: 15px;
 }

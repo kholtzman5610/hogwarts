@@ -10,3 +10,14 @@ body, html {
     -o-background-size: cover;
     background-size: cover;
 }
+
+.navbar-nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: row;
+    padding-left: 0;
+    margin-bottom: 10px;
+    list-style: none;
+    justify-content: space-evenly;
+}

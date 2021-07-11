@@ -1,15 +1,17 @@
 <br><br>
-<div id="container"></div>
+<div id="welcome_home"></div>
+
 <div class="text-center">
-  <h3> 
-    Have you ever wanted to become a student at Hogwarts School of Witchcraft and Wizardry?
-    
+  <h3 id="intro"> 
+    Have you ever imagined becoming a student at Hogwarts School of Witchcraft and Wizardry? 
+    Imagine no more you can do that now or after exploring the site! 
+    See our current Classes, Courses, Professors and Students!
   </h3>
 
   <a class="btn btn-primary" href="/cohorts" role="button">Current Classes</a>
   <a class="btn btn-primary" href="/students" role="button">Current Students</a>
 
-  <h3> 
+  <h3 id="intro"> 
     Ready to join? Sign up below
   </h3>
   <a class="btn btn-primary" href="/students/new" role="button">New Student</a>
@@ -23,7 +25,7 @@
 
 <script src="https://rawcdn.githack.com/akzhy/Vara/16e30acca2872212e28735cfdbaba696a355c780/src/vara.min.js"></script>
 <script>
-  var vara = new Vara("#container", "https://rawcdn.githack.com/akzhy/Vara/ed6ab92fdf196596266ae76867c415fa659eb348/fonts/Satisfy/SatisfySL.json", [{
+  var vara = new Vara("#welcome_home", "https://rawcdn.githack.com/akzhy/Vara/ed6ab92fdf196596266ae76867c415fa659eb348/fonts/Satisfy/SatisfySL.json", [{
     text: "Welcome!!",
     fontSize: 60,
     y:10,
@@ -33,26 +35,3 @@
     textAlign:"center"
   });
 </script>
-
-<style>
-h3 {
-  padding: 40px;
-  font-weight: bold;
-  height: inherit;
-	background: inherit;
-	font: cursive;
-	text-align: center;
-	filter: invert(1) grayscale(1) contrast(9) drop-shadow(.05em .05em black);
-}
-
-.navbar-nav {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: row;
-    padding-left: 0;
-    margin-bottom: 10px;
-    list-style: none;
-    justify-content: space-evenly;
-}
-</style>

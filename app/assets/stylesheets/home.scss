@@ -10,3 +10,23 @@ body, html {
     -o-background-size: cover;
     background-size: cover;
 }
+
+#intro {
+    color: white;
+    padding: 20px;
+    font-weight: bold;
+    background: inherit;
+    text-shadow: 2px 2px black;
+    font-size: x-large;
+}
+
+.navbar-nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: row;
+    padding-left: 0;
+    margin-bottom: 10px;
+    list-style: none;
+    justify-content: space-evenly;
+}

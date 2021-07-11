@@ -1,9 +1,13 @@
 body, html {
     text-align: center;
 
-    background: url('course_background.jpg') no-repeat center center fixed; 
+    background: url('cohort_background.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+.card-title {
+    color: #EFD777 !important;
 }
